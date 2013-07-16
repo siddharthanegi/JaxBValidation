@@ -1,6 +1,5 @@
 package com.test.model;
 
-import javax.xml.bind.annotation.XmlRootElement;
 
 
 public class Item {
