@@ -21,9 +21,6 @@ public class Tester {
 
 	public Object getObject(String sourceXML) throws XmlMappingException, IOException{
 		
-		System.out.println(sourceXML);
-		if(unmarshalService==null)
-			System.out.println("hahaahahahaha");
 		return unmarshalService.unmarshal(new StreamSource("src/main/resources/testxml.xml"));
 	}
 

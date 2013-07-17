@@ -5,7 +5,7 @@ package com.test.model;
 public class Item {
 
 	private String title;
-	private Integer quantity;
+	private String quantity;
 	private Integer price;
 	public String getTitle() {
 		return title;
@@ -13,10 +13,10 @@ public class Item {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public Integer getQuantity() {
+	public String getQuantity() {
 		return quantity;
 	}
-	public void setQuantity(Integer quantity) {
+	public void setQuantity(String quantity) {
 		this.quantity = quantity;
 	}
 	public Integer getPrice() {

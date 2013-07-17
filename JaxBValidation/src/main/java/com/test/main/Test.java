@@ -7,8 +7,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.oxm.XmlMappingException;
 
 import com.test.model.ShipOrder;
+import com.test.validate.PreValidate;
 
-public class Test {
+class Test {
 
 	/**
 	 * @param args
@@ -20,12 +21,10 @@ public class Test {
 		// TODO Auto-generated method stub
 		ApplicationContext ctx= new ClassPathXmlApplicationContext("application-context.xml");
 		Tester tester=(Tester) ctx.getBean("tester");
-		//Tester t=new Tester();
 		ShipOrder shipOrder=(ShipOrder) tester.getObject("src/main/resources/testxml.xml");
-		//StreamSource xml=new StreamSource("src/main/resources/testxml.xml");
-		
 		System.out.println(shipOrder.getOrderPerson());
-		
+		PreValidate validator=new PreValidate(shipOrder);
+		validator.checkValidity();
 
 	}
 
